@@ -1,0 +1,36 @@
+ package cs_LEXUS;
+import java.util.Scanner;
+public class Cs_LEXUS {
+    public static void main(String[] args) {
+ System.out.print("Enter the employee name: ");
+        String name = in.nextLine();
+        System.out.print("F(full time) or P(part time): ");
+        String f_or_p = in.nextLine();
+        if (f_or_p.equals("F")) {
+            System.out.println("        --- Full Time Employee ---        ");
+            System.out.print("Enter the basic pay: ");
+            double salary = in.nextDouble();
+            System.out.println("__________________________________________");
+            System.out.println("Employee Name: " + name);
+            System.out.println("Basic Pay: " + salary);
+            System.out.println("__________________________________________");
+            System.out.println("Gross Pay: " + salary);
+        } else if (f_or_p.equals("P")) {
+            System.out.println("        --- Part Time Employee ---        ");
+            System.out.print("Enter the rate per hour: ");
+            double rate = in.nextDouble();
+            System.out.print("The no. of hours you worked: ");
+            double hours = in.nextDouble();
+            System.out.print("The no. of overtime: ");
+            double overtime = in.nextDouble();
+            System.out.println("__________________________________________");
+            System.out.println("Employee Name: " + name);
+            System.out.println("Basic Pay: "+ (rate * hours));
+            System.out.println("Overtime pay: "+ (overtime * 1.25 * rate));
+            System.out.println("___________________________________________");
+            System.out.println("Gross Pay: " + (rate * hours + rate * 1.25 * overtime));
+        } else {
+            System.out.println("Invalid input!!!");
+        }
+    }
+}
