@@ -1,0 +1,30 @@
+package lexus;
+import java.util.Scanner; 
+
+public class Pelonio {
+
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
+  
+
+		int score = 0;
+		String[] questions = {"What is the main protagonist's name in the game series The Legend of Zelda?\n(a) Link\n(b) Mario\n(c) Samus\n", 
+				 "What is the main antagonist in the game series The Legend of Zelda?\n(a) Ganon\n(b) Bowser\n(c) Ridley\n",
+				"What is the name of the first game in the series The Legend of Zelda?\n(a) The Legend of Zelda: Ocarina of Time\n(b) The Legend of Zelda: A Link to the Past\n(c) The Legend of Zelda\n",
+		               "What is the name of the item used to warp between different locations in The Legend of Zelda: Ocarina of Time?\n(a) Ocarina of Time\n(b) Master Sword\n(c) Hookshot\n",
+			      "What is the name of the main antagonist in The Legend of Zelda: Breath of the Wild?\n(a) Ganon\n(b) Calamity Ganon\n(c) Ganondorf\n"};
+		String[] answers = {"a", "a", "c", "a", "b"};
+		
+		for (int i = 0; i < questions.length; i++) {
+			System.out.println(questions[i]);
+			String answer = input.nextLine();
+			if (answer.equals(answers[i])) {
+				score++;
+			}
+		}
+		
+		System.out.println("Your score is " + score + " out of " + questions.length);
+    }
+    
+}
